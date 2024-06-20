@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Restaurant Specials Menu Management</title>
+</head>
+<body>
+  <h1>Restaurant Specials Menu</h1>
+
+  <div id="menu">
+    <h2>Specials Menu Items</h2>
+    <ul id="menu-list">
+    </ul>
+  </div>
+
+  <div id="add-menu-item">
+    <h2>Add Specials Menu Item</h2>
+    <input type="text" id="item-name" placeholder="Item Name">
+    <input type="text" id="item-price" placeholder="Price">
+    <button onclick="addItem()">Add Item</button>
+  </div>
+
+  <div id="edit-menu-item" style="display: none;">
+    <h2>Edit Specials Menu Item</h2>
+    <input type="text" id="edit-item-name" placeholder="Item Name">
+    <input type="text" id="edit-item-price" placeholder="Price">
+    <button onclick="updateItem()">Update Item</button>
+    <button onclick="cancelEdit()">Cancel</button>
+  </div>
+
+  <script src="specialsMenu.js"></script>
+</body>
+</html>

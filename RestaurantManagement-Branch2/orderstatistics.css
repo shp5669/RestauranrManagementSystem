@@ -1,0 +1,101 @@
+/* Global styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h1, h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Statistics container styles */
+.statistics-container1, .statistics-container2 {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+/* First Section */
+.menu-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.menu-items, .top-selling {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+}
+
+.menu-items canvas, .top-selling ul {
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+}
+
+.week-selection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.week-selection button {
+    padding: 10px 15px;
+    cursor: pointer;
+    border: none;
+    background-color: #007bff;
+    color: #ffffff;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.week-selection button:hover {
+    background-color: #0056b3;
+}
+
+/* Second Section */
+.customer-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.customer-visits, .customer-ranks {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+}
+
+.customer-visits canvas, .customer-ranks p {
+    width: 100%;
+    max-width: 600px;
+}
+
+.customer-ranks p {
+    font-size: 18px;
+    color: #666;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .menu-section, .customer-section {
+        flex-direction: column;
+    }
+
+    .menu-items, .top-selling, .customer-visits, .customer-ranks {
+        width: 100%;
+    }
+}

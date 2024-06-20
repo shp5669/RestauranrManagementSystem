@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Order Statistics</title>
+    <link rel="stylesheet" href="orderstatistics.css">
+    <!-- Required for rendering the chart -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <h1>Order Statistics</h1>
+    <div class="statistics-container1">
+        <!-- First Section -->
+        <div class="menu-section">
+            <!-- Most Ordered Menu Items -->
+            <div class="menu-items">
+                <h2>Most Ordered Menu Items</h2>
+                <canvas id="menu-chart"></canvas>
+            </div>
+
+            <!-- Top Selling -->
+            <div class="top-selling">
+                <div class="week-selection">
+                    <label for="date-select">Select Date: </label>
+                    <input type="date" id="date-select">
+                    <button id="view-daily-sales">View Top Sellers</button>
+                </div>
+                <h2>Top Selling</h2>
+                <ul id="top-selling-list"></ul>
+            </div>
+        </div>
+        </div>
+
+        <!-- Second Section -->
+        <div class="statistics-container2">
+        <div class="customer-section">
+            <!-- Top Visited Customers -->
+            <div class="customer-visits">
+                <h2>Top Visited Customers</h2>
+                <canvas id="customer-chart"></canvas>
+            </div>
+
+            <!-- Customer Ranks (Assuming you will add this section later) -->
+            <div class="customer-ranks">
+                <h2>Customer Ranks</h2>
+                <p id="top-customer"></p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="orderstatistics.js"></script>
+</body>
+
+</html>

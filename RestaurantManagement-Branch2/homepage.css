@@ -1,0 +1,129 @@
+
+body
+	{
+		background: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    position: relative;
+	}
+
+.heading {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.subheading {
+  font-size: 16px;
+  padding-bottom: 60px;
+}
+
+p {
+  color: #848484;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.4px;
+  line-height: 28px;
+}
+
+hr {
+	border-top: 2px solid #828282;
+	width: 120px;
+}
+
+
+#menu, #aboutus{
+	padding-top: 100px;
+	padding-bottom: 100px;
+  background: #f0f0f0;
+}
+
+.parallax-section {
+  background-attachment: fixed !important;
+  background-size: cover !important;
+}
+
+
+#home {
+    background-image: url("restaurant.jpg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100vh;
+    text-align: center;
+  }
+  #home h1 {
+    font-size: 20px;
+    letter-spacing: 8px;
+    font-style: normal;
+    padding-top: 10px;
+  }
+  #home .btn {
+    background: transparent;
+    border-radius: 0;
+    border: 3px solid #ffffff;
+    color: #ffffff;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 16px 42px;
+    margin-top: 40px;
+    transition: all 0.4s ease-in-out;
+  }
+  #home .btn:hover {
+    background: #ffffff;
+    color: #202020;
+  }
+  
+
+  footer {
+   background-image: url("footer.jpg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  footer h2 {
+    padding-bottom: 14px;
+  }
+  footer h3 {
+    padding-top: 8px;
+  }
+  footer p {
+    color: #ffffff;
+  }
+  footer span {
+    font-weight: bold;
+    padding-left: 24px;
+  }
+  footer .ph, footer .address {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  footer .fa {
+    font-size: 12px;
+    padding-right: 10px;
+  }
+  #copyright {
+    background: #343434;
+    color: #ffffff;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    text-align: center;
+   }
+  #copyright p {
+    color: #ffffff;
+  }
+  #copyright a {
+    color: #ffffff;
+  } 
+  

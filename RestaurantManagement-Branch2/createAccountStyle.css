@@ -1,0 +1,67 @@
+/* Apply styles to the container */
+.container {
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px #888;
+  }
+  
+  /* Apply styles to labels */
+  label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+  }
+  
+  /* Apply styles to input fields */
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  /* Apply styles to the submit button */
+  button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  /* Change button color on hover */
+  button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  /* Style the password strength message */
+  #password-strength {
+    margin: 10px 0;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Style for invalid input messages */
+  #password-strength[style*="red"] {
+    color: red;
+  }
+
+  #password-length[style*="red"] {
+    color: red;
+  }
+  
+  /* Style for valid input messages */
+  #password-strength[style*="green"] {
+    color: green;
+  }
+  

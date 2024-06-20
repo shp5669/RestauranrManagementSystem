@@ -1,0 +1,103 @@
+<html>
+  <head>
+    <title>Restaurant of Group 8</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="createAccountStyle.css" />
+  </head>
+
+  <body>
+    <form id="myform">
+      <div class="container">
+        –
+        <label for="email"><b>Email</b></label>
+        <input
+          type="email"
+          placeholder="Enter Email"
+          name="email"
+          id="email"
+          required
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+        />
+
+        <label for="psw"><b>Password</b></label>
+        <input
+          type="password"
+          placeholder="Enter Password"
+          name="psw"
+          id="password"
+          required
+        />
+        <span id="password-strength"></span>
+        <span id="password-length"></span>
+        <button type="submit">Create</button>
+      </div>
+    </form>
+    <script>
+      document
+        .getElementById("myform")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          const email = document.getElementById("email").value;
+          const password = document.getElementById("password").value;
+          const passwordStrengthMessage =
+            document.getElementById("password-strength");
+          const passwordLengthMessage =
+            document.getElementById("password-length");
+
+          // Regular expression to validate email format
+          const emailPattern =
+            /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+          if (!emailPattern.test(email)) {
+            // Invalid email address
+            passwordStrengthMessage.innerText =
+              "Please enter a valid email address.";
+            passwordStrengthMessage.style.color = "red";
+            return; // Stop form submission
+          }
+
+          // Check if the password meets the required criteria
+          const hasCapitalLetter = /[A-Z]/.test(password);
+          const hasNumber = /\d/.test(password);
+          const isLengthValid = password.length >= 8;
+
+          if (hasCapitalLetter && hasNumber && isLengthValid) {
+            passwordStrengthMessage.innerText = "Password is strong!";
+            passwordStrengthMessage.style.color = "green";
+
+            // Continue with form submission
+            const apiUrl = "http://localhost:3000/api/accounts/create";
+            const requestData = {
+              email: email,
+              password: password,
+            };
+
+            fetch(apiUrl, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(requestData),
+            })
+              .then((response) => {
+                window.location.href = "homepage.html";
+              })
+              .catch((error) => {
+                console.error("Error sending data:", error);
+              });
+          } else {
+            // Display appropriate error messages
+            if (!isLengthValid) {
+              passwordLengthMessage.innerText =
+                "Password must be at least 8 characters long.";
+              passwordLengthMessage.style.color = "red";
+            } else if (!hasCapitalLetter || !hasNumber) {
+              passwordStrengthMessage.innerText =
+                "Password must include at least one capitalized character and one number.";
+              passwordStrengthMessage.style.color = "red";
+            }
+          }
+        });
+    </script>
+  </body>
+</html>

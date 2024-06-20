@@ -1,0 +1,96 @@
+<html>
+  <head>
+    <title>Restaurant of Group 8</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="indexStyle.css" />
+  </head>
+
+  <body>
+    <form id="myform">
+      <div class="container">
+        <h2 class="welcome-text">WELCOME to The Bestie restaurant</h2>
+        <label for="email"><b>Email</b></label>
+        <input
+          type="text"
+          placeholder="Enter Email"
+          name="email"
+          id="email"
+          required
+        />
+
+        <label for="psw"><b>Password</b></label>
+        <input
+          type="password"
+          placeholder="Enter Password"
+          name="psw"
+          id="password"
+          required
+        />
+
+        <button type="submit">Login</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember" /> Remember
+          me
+        </label>
+      </div>
+
+      <div
+        class="container"
+        style="
+          background-color: #f1f1f1;
+          display: flex;
+          justify-content: space-between;
+        "
+      >
+        <div class="button-container">
+          <button type="button" class="cancelbtn">Cancel</button>
+          <span class="psw"
+            ><a href="createAccount.html">Create Account</a></span
+          >
+          <span class="psw"
+            ><a href="resetpassword.html">Forgot Password?</a></span
+          >
+        </div>
+      </div>
+    </form>
+    <script>
+      document
+        .getElementById("myform")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          console.log("abc");
+          var email = document.getElementById("email").value;
+          var password = document.getElementById("password").value;
+          const apiUrl = "http://localhost:3000/api/accounts";
+          const requestData = {
+            email: email,
+            password: password,
+          };
+
+          fetch(apiUrl, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(requestData),
+          })
+            .then((response) => {
+              if (!response.ok) {
+                throw new Error("Network response was not ok");
+              }
+              return response.json();
+            })
+            .then((data) => {
+              localStorage.setItem("email", email);
+              localStorage.setItem("name", data.name);
+              window.location.href = "homepage.html";
+            })
+
+            .catch((error) => {
+              console.error("Error sending data:", error);
+            });
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,211 @@
+/* Reset some default browser styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 15;
+    padding: 0;
+  }
+  
+  /* Set a background image or color */
+  body {
+    background-image: url('https://images.pexels.com/photos/1546039/pexels-photo-1546039.jpeg?auto=compress&cs=tinysrgb&w=600');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Header styling */
+  header {
+    background-color: #d8d8d8;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .subHeading {
+    color: #333;
+    padding: 20px;
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Navigation menu styling */
+  nav {
+    margin-top: 20px;
+  }
+  
+  nav ul {
+    list-style: none;
+  }
+  
+  nav li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  /* Main content styling */
+  .main-content {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  
+  /* Heading styles */
+  h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #000000;
+  }
+  
+  /* Menu item styles */
+  .menu-item {
+    margin-bottom: 20px;
+  }
+  
+  .menu-item h2 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .menu-item p {
+    font-size: 18px;
+    color: #666;
+  }
+  
+  /* Reservation form styling */
+  .reservation-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .reservation-form input[type="text"],
+  .reservation-form input[type="email"],
+  .reservation-form select,
+  .reservation-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .reservation-form button {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  /* Footer styling */
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Responsive design */
+  @media screen and (max-width: 768px) {
+    .menu-item {
+      text-align: center;
+    }
+  }
+
+  .search-container {
+    position: relative;
+    margin: 40px;
+    max-width: 300px;
+    left: 65%;
+  }
+  
+  /* Search input field */
+  .search-input {
+    width: 87%;
+    height: 5.3%;
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+  }
+  
+  /* Search button */
+  .search-button {
+    position: absolute;
+    right: -18%;
+    top: 30%;
+    background-color: #7aba9f;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Style the button on hover */
+  .search-button:hover {
+    background-color: #ff8533;
+  }
+
+  .btn-block {
+    font-size: 15px;
+    display:inline;
+  }
+  .input {
+
+  }
+
+  .results-table {
+    width:93%;
+    background-color: #b4aaaa;    
+    padding: 10px;
+    background-image: url('https://images.pexels.com/photos/235985/pexels-photo-235985.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover;
+    background-repeat:round;
+  }
+
+  .outer-results-table {
+    width: 25%;
+    float: left;
+    background-color: #bdafa3;    
+    padding: 10px;
+  }
+
+  .whole-menu-table {
+    background-color: #533518;    
+    padding: 10px;
+    column-count: 3;
+    column-span: all;
+  }
+
+  .whole-menu-column {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .menu-categories {
+    width: 40%;
+    float: right; 
+    background-color: #bda3a3; 
+  }
+
+  .menu-categories-inner {
+    padding-top: 30px;
+    padding-right: 10px;
+    padding-bottom: 35px;
+    width: 98%;
+    background-image: url('https://images.pexels.com/photos/235985/pexels-photo-235985.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  }
+
+  .menu-categories-list {
+    font-size: large;
+    font-style: italic;
+    color:#b6abb0;
+  }
+
+  .img {
+    margin-top:-10%; 
+    margin-left:auto; 
+    margin-right:auto; 
+    display: block; 
+    margin-bottom: 100;
+  }

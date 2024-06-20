@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Reservation</title>
+    <!-- Add any necessary CSS stylesheets or libraries here -->
+    <link rel="stylesheet" href="TableAvailable.css">
+</head>
+
+<body>
+    <header>
+        <h1>Table Reservation</h1>
+    </header>
+    <button id="backToHome">Go to Homepage</button>
+    <main>
+        <!-- View Tables and Request Reservation Section -->
+        <section id="tableReservation">
+            <h2>Table Availability</h2>
+            
+            <!-- Display tables and their availability (replace with dynamic data from your backend) -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Table Number</th>
+                        <th>Capacity</th>
+                        <th>Availability</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- Rows will be inserted here via JavaScript -->
+                </tbody>
+                
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Restaurant Name. All Rights Reserved.</p>
+    </footer>
+</body>
+<script src="TableAvailable.js"></script>
+
+</html>
